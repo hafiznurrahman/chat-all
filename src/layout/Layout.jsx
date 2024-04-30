@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <>
     <ScrollRestoration/>
-      <main>
+      <main className="w-screen h-dvh">
         <Outlet />
       </main>
     </>
