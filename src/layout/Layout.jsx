@@ -12,7 +12,7 @@ export default function Layout() {
     <>
       <ScrollRestoration />
       {isVisible && <Navbar />}
-      <main className="w-screen h-dvh">
+      <main className="w-screen h-screen">
         <Outlet />
       </main>
     </>
