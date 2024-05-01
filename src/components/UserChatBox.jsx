@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Avatar from "./Avatar.jsx";
 
 export default function UserChatBox({ image, alt, name }) {
-  const nameClean = name.replace(/\s/g, "")
-  
-  
+  const defaultName = name || "Username";
+  const nameClean = defaultName.toLowerCase().replace(/\s/g, "");
+
   return (
     <Link
       to={`/chat/${nameClean}`}
@@ -13,7 +13,7 @@ export default function UserChatBox({ image, alt, name }) {
       <div className="w-12 h-12">
         <Avatar image={image} alt={alt} />
       </div>
-      <span className="font-bold truncate">{name || "Name"}</span>
+      <span className="font-bold truncate">{defaultName}</span>
     </Link>
   );
 }
